@@ -1,3 +1,5 @@
+DROP DATABASE financas_facil;
+
 -- Cria o banco de dados se não existir
 CREATE DATABASE IF NOT EXISTS financas_facil;
 USE financas_facil;
@@ -18,7 +20,7 @@ CREATE TABLE accounts (
   id INT AUTO_INCREMENT,
   user_id INT NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (user_id) REFERENCES users(id)
+  FOREIGN KEY (user_id) REFERENCES usuarios(id)
 );
 
 -- Cria a tabela 'finance_calculations' se não existir
